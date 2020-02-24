@@ -6,22 +6,22 @@ const portfolio = (props) => {
     return (
         <span>
             {props.data.allMarkdownRemark.edges.map(({ node }) => {
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
-                <Link to={node.fields.slug}>
-                  {node.frontmatter.title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-            {node.excerpt}
-            </section>
-          </article>
-        )
-      })}
+                return (
+                <article key={node.fields.slug}>
+                    <header>
+                    <h3>
+                        <Link to={node.fields.slug}>
+                        {node.frontmatter.title}
+                        </Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                    </header>
+                    <section>
+                    {node.excerpt}
+                    </section>
+                </article>
+                )
+            })}
         </span>
     )
 }
